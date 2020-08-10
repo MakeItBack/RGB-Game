@@ -1,4 +1,4 @@
-# Red-Green-Blue
+# RGB Game
 **[The Great RGB Colour Game](https://redgreenblue.netlify.app/) was built as part of the Web Developer Bootcamp Course.**<br>
 Built using HTML, CSS and vanilla Javascript only
 
