@@ -1,5 +1,5 @@
 # Red-Green-Blue
-**[The Great RGB Colour Game](https://redgreenblue.netlify.app/) was buit as part of the Web Developer Bootcamp Course.**<br>
+**[The Great RGB Colour Game](https://redgreenblue.netlify.app/) was built as part of the Web Developer Bootcamp Course.**<br>
 
 Test your skill at matching the correct colour to a randonly generated RGB code
 
