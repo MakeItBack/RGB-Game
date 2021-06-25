@@ -1,73 +1,106 @@
-body {	
-	background-color: #232323;
-	margin: 0;
-	font-family: bahnschrift, sans-serif;}
+body {
+   background-color: #232323;
+   margin: 0;
+   font-family: bahnschrift, sans-serif;
+}
 
-h1 {	
-	color: white;
-	text-align: center;
-	background-color: steelblue;
-	margin: 0;
-	font-weight: lighter;
-	text-transform: uppercase;
-	line-height: 1.1;
-	padding: 20px 0;
+h1 {
+   color: white;
+   text-align: center;
+   background-color: steelblue;
+   margin: 0;
+   font-size: 2rem;
+   font-weight: lighter;
+   text-transform: uppercase;
+   line-height: 1.1;
+   padding: 20px 0;
 }
 
 /*styling the squares - they take up 30% of the width of the element that they are inside: the div with ID 'container'*/
 .square {
-	width: 30%;
-	background-color: purple;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	border-radius: 15%;
-	transition: background-color 0.5s;
-		-webkit-transition: background 0.5s;
-		-moz-transition: background 0.5s;
+   width: 30%;
+   background-color: purple;
+   padding-bottom: 30%;
+   float: left;
+   margin: 1.66%;
+   border-radius: 15%;
+   transition: background-color 0.5s;
+   -webkit-transition: background 0.5s;
+   -moz-transition: background 0.5s;
 }
 
 #container {
-	max-width: 600px;
-	margin: 20px auto;
+   max-width: 600px;
+   margin: 20px auto;
 }
 
 #stripe {
-	background-color: white;
-	height: 30px;
-	text-align: center;}
+   background-color: white;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+}
+
+#controls {
+   width: 600px;
+   display: flex;
+   justify-content: space-between;
+}
 
 .selected {
-	background-color: steelblue;
-	color: white;}
+   background-color: steelblue;
+   color: white;
+}
 
 #colourHeading {
-	font-size: 200%;
+   font-size: 200%;
 }
 
 button {
-	background: none;
-	border: none;
-	text-transform: uppercase;
-	height: 100%;
-	font-weight: 700;
-	color: steelblue;
-	letter-spacing: 1px;
-	font-size: inherit;
-	transition: all 0.4s; /*Adds fade in-out transition on button press*/
-		-webkit-transition: all 0.4s;
-		-moz-transition: all 0.4s;
-		outline: none; /*removes outline from button*/s
-
+   background: none;
+   margin: 0 20px;
+   border: none;
+   text-transform: uppercase;
+   height: 100%;
+   font-weight: 700;
+   color: steelblue;
+   letter-spacing: 1px;
+   font-size: inherit;
+   transition: all 0.6s; /*Adds fade in-out transition on button press*/
+   -webkit-transition: all 0.6s;
+   -moz-transition: all 0.6s;
+   outline: none; /*removes outline from button*/
 }
 
 button:hover {
-	color: white;
-	background-color: steelblue;
-
+   color: white;
+   background-color: steelblue;
 }
 
+/* #message {
+   display: inline-block;
+   width: 20%;
+} */
+
 #message {
-	display: inline-block;
-	width: 20%;
+   position: absolute;
+   bottom: 5%;
+   left: 0;
+   text-align: center;
+   width: 100%;
+   color: white;
+   font-size: 3rem;
+}
+@media (max-width: 600px) {
+   #colourHeading {
+      font-size: 140%;
+      color: black;
+   }
+   #stripe {
+      height: 60px;
+      font-size: 0.9rem;
+   }
+   button {
+      margin: 0 5px;
+   }
 }
