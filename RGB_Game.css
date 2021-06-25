@@ -88,6 +88,9 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+   h1 {
+      font-size: 1.8rem;
+   }
    #colourHeading {
       font-size: 125%;
       color: black;
@@ -95,5 +98,8 @@ button:hover {
    #stripe {
       height: 60px;
       font-size: 0.9rem;
+   }
+   #level {
+      width: 70%;
    }
 }
