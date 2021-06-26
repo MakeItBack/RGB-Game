@@ -79,12 +79,32 @@ button:hover {
 
 #message {
    position: absolute;
-   bottom: 0;
+   bottom: 50%;
    left: 0;
    text-align: center;
    width: 100%;
    color: white;
    font-size: 2.5rem;
+   opacity: 0%;
+}
+
+.flashMessage {
+   animation: fadeInOut 2s 1;
+}
+
+@keyframes fadeInOut {
+   0% {
+      opacity: 30%;
+   }
+   20% {
+      opacity: 80%;
+   }
+   70% {
+      opacity: 100%;
+   }
+   100% {
+      opacity: 0%;
+   }
 }
 
 @media (max-width: 500px) {
