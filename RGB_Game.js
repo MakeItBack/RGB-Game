@@ -46,12 +46,18 @@ for (var i = 0; i < squares.length; i++) {
    // Assign a colour from the array to each square. i is the same for both so it just assigns them in order. Colour 1 in square 1 etc
    squares[i].style.backgroundColor = colours[i];
    // Add click listeners to each square and save the colour code to a variable
-   squares[i].addEventListener("click", function () {
+   squares[i].addEventListener("click", function (e) {
       var clickedSquare = this.style.backgroundColor;
+      //  this pulse function starts/restarts the fadeInOut animation for the messages
+      const pulse = () => {
+         e.preventDefault;
+         messageDisplay.classList.remove("flashMessage");
+         void messageDisplay.offsetWidth;
+         messageDisplay.classList.add("flashMessage");
+      };
       if (clickedSquare === pickedColour) {
          messageDisplay.textContent = "Correct!";
-         pulse(2050);
-         //  messageDisplay.classList.add("flashMessage");
+         pulse();
          resetBtn.textContent = "Play Again?";
          sameColour();
          header.style.backgroundColor = pickedColour;
@@ -60,22 +66,13 @@ for (var i = 0; i < squares.length; i++) {
          this.style.background = "#232323";
          // display a message
          messageDisplay.textContent = "Nope, try Again!";
-         pulse(500);
-         //  messageDisplay.classList.add("flashMessage");
+         pulse();
       }
    });
 }
 
-function pulse(time) {
-   messageDisplay.classList.add("flashMessage");
-   setTimeout(() => {
-      messageDisplay.classList.remove("flashMessage");
-   }, time);
-}
-
 // function to initialise/reset all the styling after changing level or hitting reset (my idea!)
 function intialise() {
-   messageDisplay.classList.remove("flashMessage");
    // reset the colour of the header bar
    header.style.backgroundColor = "steelblue";
    // fill the array with the right number of new colours
